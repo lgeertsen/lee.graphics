@@ -1,8 +1,16 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 
 import Nav from '../components/Nav'
+import ProjectCard from '../components/ProjectCard'
 
-const Home = () => (
+const Home = () => {
+
+  useEffect(() => {
+   console.log("%c ","padding-left:100%;padding-top:50%;background-size:cover;background-image:url('https://i.giphy.com/media/MM0Jrc8BHKx3y/giphy.webp')");
+ });
+
+  return (
   <React.Fragment>
     <Head>
       <title>Lee Geertsen</title>
@@ -20,57 +28,33 @@ const Home = () => (
 
       <section className="full-page" id="hello">
         <div className="full-page w-container wide-container">
-          <p className="half-p">I'm a last year VFX &amp; Game Programming student at <a href="https://artfx.school/en/technical-director-visual-effetcs-video-games-programming/" target="_blank" className="stylish-link">ArtFx</a> with a <em>passion for coding &amp; cocktails</em></p>
+          <div className="half-p">I'm a last year VFX &amp; Game Programming student at <a href="https://artfx.school/en/technical-director-visual-effetcs-video-games-programming/" target="_blank" className="stylish-link">ArtFx</a> with a <em>passion for coding &amp; cocktails</em></div>
         </div>
       </section>
 
       <section className="main-content">
 
-        <section className="full-section" id="demo-reel">
+        <section className="full-section" id="projects-container">
           <div className="frame"></div>
           <h1>Projects</h1>
           <div className="projects-container">
-            <div className="project-card">
-              {/* <div className="frame frame-yellow"></div> */}
-              <div className="project-card-image"></div>
-              <div className="project-card-info">
-                <div className="project-card-content">
-                  <h2 className="project-title">Pulsar</h2>
-                  <div className="divider"></div>
-                  <p className="grey-text">Open source Pipeline</p>
-                </div>
-                <div className="frame frame-grey"></div>
-              </div>
-            </div>
-
-            <div className="project-card">
-              {/* <div className="frame frame-yellow"></div> */}
-              <div className="project-card-image"></div>
-              <div className="project-card-info">
-                <div className="project-card-content">
-                  <h2 className="project-title">Vyewer</h2>
-                  <div className="divider"></div>
-                  <p className="grey-text">Open source Pipeline</p>
-                </div>
-                <div className="frame frame-grey"></div>
-              </div>
-            </div>
-
-            <div className="project-card">
-              {/* <div className="frame frame-yellow"></div> */}
-              <div className="project-card-image"></div>
-              <div className="project-card-info">
-                <div className="project-card-content">
-                  <h2 className="project-title">Magnetar</h2>
-                  <div className="divider"></div>
-                  <p className="grey-text">Open source Pipeline</p>
-                </div>
-                <div className="frame frame-grey"></div>
-              </div>
-            </div>
+            <ProjectCard
+              project="Pulsar"
+              description="Open source Pipeline"
+            />
+            <ProjectCard
+              project="Vyewer"
+              description="Open source Pipeline"
+            />
+            <ProjectCard
+              project="Magnetar"
+              description="Open source Pipeline"
+            />
+          </div>
+          <div className="projects-btn-container">
+            <div className="btn">SEE ALL PROJECTS</div>
           </div>
         </section>
-
 
 
       </section>
@@ -139,7 +123,9 @@ const Home = () => (
       .half-p {
         position: absolute;
         top: 24%;
-        width: 45%;
+        max-width: 45%;
+        min-width: 500px;
+        background: #fff;
         margin-left: -10px;
         padding-bottom: 10px;
         padding-left: 10px;
@@ -157,6 +143,7 @@ const Home = () => (
       }
 
       .frame {
+        z-index: 1;
         position: absolute;
         width: calc(100% - 20px);
         height: calc(100% - 20px);
@@ -185,6 +172,23 @@ const Home = () => (
 
       .grey-text {
         color: #a4a4a4;
+      }
+
+      .btn {
+        position: relative;
+        z-index: 5;
+        padding: 10px 20px;
+        background: transparent;
+        color: #fff;
+        border-radius: 3px;
+        font-family: "Oswald", sans-serif;
+        border: 1px solid #dfa25f;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        background: #dfa25f;
       }
     `}</style>
 
@@ -239,7 +243,9 @@ const Home = () => (
         height: 100%;
       }
 
-      #demo-reel {
+      #projects-container {
+        display: flex;
+        flex-direction: column;
         /* border: 10px solid #fff; */
         background-color: #eee;
         background-image: linear-gradient(180deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("https://images.unsplash.com/photo-1532264523420-881a47db012d");
@@ -248,9 +254,11 @@ const Home = () => (
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        padding-bottom: 50px;
       }
 
-      #demo-reel h1 {
+      #projects-container h1 {
+        margin: 0;
         padding-top: 50px;
         margin-bottom: 0px;
         font-family: 'Fjalla One', sans-serif;
@@ -264,71 +272,24 @@ const Home = () => (
       }
 
       .projects-container {
+        flex: 1;
         display: flex;
         flex-direction: row;
         margin: 0 50px;
         margin-top: 20px;
+        margin-bottom: 20px;
         flex-wrap: wrap;
         justify-content: space-around;
       }
 
-      .project-card {
-        width: 600px;
-        // max-width: 600px;
-        height: 30vh;
+      .projects-btn-container {
         position: relative;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 40px;
-        background-color: #fff;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
-      }
-
-      .project-card-image {
-        display: flex;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        justify-content: center;
+        display: flex
         align-items: center;
-        flex: 1;
-        background-color: #e3e3e3;
-        background-image: url("https://images.unsplash.com/photo-1535016120720-40c646be5580");
-        background-position: 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-decoration: none;
-      }
-
-      .project-card-info {
-        position: relative;
-        display: flex;
-        width: 55%;
-        padding: 48px 20px;
         justify-content: center;
-        align-items: center;
-      }
-
-      .project-card-content {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        width: 100%;
-        padding-top: 8px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-
-      .project-title {
-        color: #444;
-        font-family: 'Tuesday Night', 'Fjalla One', sans-serif;
-        font-size: 68px;
-        font-weight: 400;
       }
     `}</style>
   </React.Fragment>
-)
+)}
 
 export default Home

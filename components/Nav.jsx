@@ -10,7 +10,7 @@ const Nav = () => {
       Lee  <span>G.</span>
     </a>
     <div className="hamburger-wrapper">
-      <div id="hamburger-square" className="" onClick={() => setOpen(!open)}>
+      <div className={open ? "hamburger-square cross" : "hamburger-square"} onClick={() => setOpen(!open)}>
         <div className="hamburger-line"></div>
         <div className="hamburger-line line-bottom"></div>
       </div>
@@ -35,7 +35,7 @@ const Nav = () => {
       <h1 className="nav-text">HOME</h1>
       <div className="nav-line"></div>
     </a>
-    <a href="Resume_GEERTSEN_Lee.pdf" className="nav-link" target="_blank">
+    <a href="Resume_GEERTSEN_Lee_Pipeline_TD.pdf" className="nav-link" target="_blank">
       <h1 className="nav-text">RESUME</h1>
       <div className="nav-line"></div>
     </a>
@@ -141,7 +141,7 @@ const Nav = () => {
       flex: 0 auto;
     }
 
-    #hamburger-square {
+    .hamburger-square {
       position: relative;
       top: 0px;
       right: 0px;
@@ -169,7 +169,7 @@ const Nav = () => {
       cursor: pointer;
     }
 
-    #hamburger-square .hamburger-line {
+    .hamburger-square .hamburger-line {
       position: absolute;
       width: 60%;
       height: 1px;
@@ -179,8 +179,16 @@ const Nav = () => {
       transition: 0.4s all ease;
     }
 
-    #hamburger-square .hamburger-line.line-bottom {
+    .hamburger-square .hamburger-line.line-bottom {
       transform: translate3d(0px, 6px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+
+    .hamburger-square.cross .hamburger-line {
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+    }
+
+    .hamburger-square.cross .hamburger-line.line-bottom {
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg);
     }
 
     .icon {
