@@ -1,14 +1,17 @@
 import { useState } from 'react';
+import Link from 'next/link'
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
   return (
-  <div className="navigation-wrapper">
+  <div className={open ? "navigation-wrapper" : "navigation-wrapper closed"}>
     <div className="left-navigation">
-      <a href="/" className="brand">
+    <Link href="/">
+      <a className="brand">
       Lee  <span>G.</span>
-    </a>
+      </a>
+    </Link>
     <div className="hamburger-wrapper">
       <div className={open ? "hamburger-square cross" : "hamburger-square"} onClick={() => setOpen(!open)}>
         <div className="hamburger-line"></div>
@@ -19,34 +22,40 @@ const Nav = () => {
     <div className="social-wrapper">
       <div className="icons-wrapper">
         <a href="https://www.linkedin.com/in/lgeertsen/" target="_blank" className="icon fa-stack">
-          <i className="fas fa-circle fa-stack-2x"></i>
-          <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+          {/* <i className="fas fa-circle fa-stack-2x"></i>
+          <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i> */}
+          <i className="lab la-github"></i>
         </a>
         <a href="https://github.com/lgeertsen" target="_blank" className="icon fa-stack">
-          <i className="fas fa-circle fa-stack-2x"></i>
-          <i className="fab fa-github fa-stack-1x fa-inverse"></i>
+          {/* <i className="fas fa-circle fa-stack-2x"></i>
+          <i className="fab fa-github fa-stack-1x fa-inverse"></i> */}
+          <i className="lab la-linkedin"></i>
         </a>
       </div>
     </div>
   </div>
 
   <div id="navigation-menu" className={open ? "open" : ""}>
-    <a href="index.html" className="nav-link">
-      <h1 className="nav-text">HOME</h1>
-      <div className="nav-line"></div>
-    </a>
+    <Link href="/">
+      <a className="nav-link">
+        <h1 className="nav-text">HOME</h1>
+        <div className="nav-line"></div>
+      </a>
+    </Link>
     <a href="Resume_GEERTSEN_Lee_Pipeline_TD.pdf" className="nav-link" target="_blank">
       <h1 className="nav-text">RESUME</h1>
       <div className="nav-line"></div>
     </a>
-    <a href="projects.html" className="nav-link">
-      <h1 className="nav-text">PROJECTS</h1>
-      <div className="nav-line"></div>
-    </a>
-    <a href="contact.html" className="nav-link">
+    <Link href="projects">
+      <a className="nav-link">
+        <h1 className="nav-text">PROJECTS</h1>
+        <div className="nav-line"></div>
+      </a>
+    </Link>
+    {/* <a href="contact.html" className="nav-link">
       <h1 className="nav-text">CONTACT</h1>
       <div className="nav-line"></div>
-    </a>
+    </a> */}
   </div>
 
   <style jsx>{`
@@ -56,7 +65,13 @@ const Nav = () => {
       top: 0%;
       right: auto;
       bottom: 0%;
+      width: 400px;
       z-index: 9998;
+      transition: all 0.6s ease;
+    }
+
+    .navigation-wrapper.closed {
+      width: 90px;
     }
 
     .left-navigation {
@@ -194,7 +209,7 @@ const Nav = () => {
     .icon {
       display: block;
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 36px;
       color: #dfa25f;
       transition: 0.2s;
     }
@@ -204,10 +219,9 @@ const Nav = () => {
     }
 
     #navigation-menu {
-      position: relative;
-      left: auto;
+      position: fixed;
+      left: -400px;
       top: 0%;
-      right: 400px;
       bottom: auto;
       z-index: 1;
       display: -webkit-box;
@@ -237,7 +251,7 @@ const Nav = () => {
     }
 
     #navigation-menu.open {
-      right: 0%;
+      left: 0;
     }
 
     .nav-link {
