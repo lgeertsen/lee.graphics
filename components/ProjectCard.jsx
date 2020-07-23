@@ -74,8 +74,10 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
             font-family: 'Tuesday Night', 'Fjalla One', sans-serif;
             font-size: 88px;
             font-weight: 400;
-            margin-top: 130px;
+            margin-top: 80px;
+            margin-bottom: 50px;
             word-spacing: 40px;
+            line-height: 110px;
           }
 
           .project-card {
@@ -203,6 +205,59 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
           }
           .project-link-container:hover h6 {
             color: #444;
+          }
+
+          @media (max-width: 1200px) {
+            .project-title {
+              font-size: 54px;
+              font-weight: 400;
+              margin-top: 50px;
+              margin-bottom: 30px;
+              word-spacing: 40px;
+              line-height: 70px;
+            }
+
+            .project-card {
+              flex-direction: column
+            }
+
+            .project-card-image {
+              order: 1;
+              margin: 10px;
+              margin-bottom: 0;
+            }
+
+            .project-card-info {
+              order: 2;
+              width: 100%;
+            }
+          }
+
+          @media (max-width: 600px) {
+            .project-title {
+              font-size: 44px;
+              font-weight: 400;
+              margin-top: 40px;
+              margin-bottom: 20px;
+              word-spacing: 30px;
+              line-height: 50px;
+            }
+            .project-card {
+              margin-bottom: 50px;
+            }
+            .grey-text {
+              font-size: 14px;
+            }
+            .project-card-techno {
+              width: 25px;
+              margin-right: 5px;
+            }
+            .project-link i {
+              font-size: 22px;
+            }
+            .project-link h6 {
+              font-size: 14px;
+            }
           }
         `}</style>
       </section>

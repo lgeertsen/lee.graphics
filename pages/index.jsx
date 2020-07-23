@@ -67,33 +67,59 @@ const Home = () => {
           <div className="container" id="contact-container">
             <div className="cocktail-card">
               <div className="post-card-content">
-                <h2>My Favorite Cocktail</h2>
+                <h2 className="cocktail-subtitle">My Favorite Cocktail</h2>
+                <h1 className="cocktail-title white-text">The Aviation</h1>
                 <div className="divider divider-white"></div>
-                <div className="container ingredients">
-                  <div className="row">
-                    <div className="col-4 measurement text-right">1 oz</div>
-                    <div className="col-8 ingredient text-left">Gin</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-4 measurement text-right">1 oz</div>
-                    <div className="col-8 ingredient text-left">Campari</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-4 measurement text-right">1 oz</div>
-                    <div className="col-8 ingredient text-left">Sweet vermouth</div>
-                  </div>
+                <div className="columns is-mobile">
+                  <div className="column is-two-fifths has-text-right">1.5 oz</div>
+                  <div className="column has-text-left">Gin</div>
+                </div>
+                <div className="columns is-mobile">
+                  <div className="column is-two-fifths has-text-right">1 tsp</div>
+                  <div className="column has-text-left">Crème De Violette</div>
+                </div>
+                <div className="columns is-mobile">
+                  <div className="column is-two-fifths has-text-right">1/2 oz</div>
+                  <div className="column has-text-left">Maraschino Liqueur</div>
+                </div>
+                <div className="columns is-mobile">
+                  <div className="column is-two-fifths has-text-right">3/4 oz</div>
+                  <div className="column has-text-left">Lemon Juice</div>
+                </div>
+                <div className="columns is-mobile">
+                  <div className="column is-two-fifths has-text-right">1/4 oz</div>
+                  <div className="column has-text-left">Simple Syrup</div>
                 </div>
               </div>
               <div className="frame"></div>
             </div>
             <div className="contact-card">
               <div className="post-card-content">
-                <h2>Contact Information</h2>
+                <h1 className="contact-title">Get In Touch</h1>
                 <div className="divider"></div>
-                <div className="preparation">
-                  <p className="preparation-step">Add all the ingredients into a mixing glass with ice, and stir until well-chilled.</p>
-                  <p className="preparation-step">Strain into a rocks glass filled with large ice cubes.</p>
-                  <p className="preparation-step">Garnish with an orange peel.</p>
+                <div className="columns is-8-widescreen is-desktop is-centered-mobile">
+                  <div className="column is-8-widescreen">
+                    <div className="contact-info grey-text"><i className="las la-user-alt"></i>Lee Geertsen</div>
+                    <div className="contact-info grey-text"><i className="las la-map-marker"></i>Montpellier, France</div>
+                    <div className="contact-info grey-text"><i className="las la-phone"></i>+33 (0) 7 71 76 38 62</div>
+                  </div>
+                  <div className="column is-8-widescreen">
+                    <div className="contact-info grey-text">
+                      <a className="stylish-link" href="mailto:lgeertsen@artfx.fr">
+                        <i className="las la-envelope"></i>lgeertsen@artfx.fr
+                      </a>
+                    </div>
+                    <div className="contact-info grey-text">
+                      <a className="stylish-link" href="https://www.linkedin.com/in/lgeertsen/" target="_blank" >
+                        <i className="lab la-linkedin"></i>@lgeertsen
+                      </a>
+                    </div>
+                    <div className="contact-info grey-text">
+                      <a className="stylish-link" href="https://github.com/lgeertsen" target="_blank">
+                        <i className="lab la-github"></i>lgeertsen
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="frame frame-grey"></div>
@@ -272,8 +298,225 @@ const Home = () => {
         padding: 48px 2%;
       }
 
+      .post-card-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        padding-top: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cocktail-subtitle,
+      .contact-title {
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .contact-title {
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .cocktail-title {
+        text-align: center;
+        font-family: 'Tuesday Night', 'Fjalla One', sans-serif;
+        text-transform: none;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 70px;
+        text-shadow: 1px 1px 2px #444;
+      }
+
+      .cocktail-card .columns {
+        width: 90%;
+        margin-bottom: 0;
+      }
+
       .contact-card {
         flex: 2;
+      }
+
+      .contact-card .columns {
+        width: 80%;
+        text-align: left;
+        margin-top: 15px;
+      }
+
+      .contact-card .contact-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+
+      .contact-card i {
+        margin-right: 10px;
+        font-size: 28px;
+        color: #444;
+      }
+
+      .contact-card .stylish-link {
+        position: relative;
+        font-weight: 400;
+      }
+
+      .contact-card .stylish-link i {
+        position: relative;
+        bottom: -3px;
+      }
+
+      @media (max-width: 1500px) {
+        #top-title {
+          right: 8%;
+        }
+      }
+      @media (max-width: 1300px) {
+        #top-title {
+          font-size: 100px;
+          line-height: 120px;
+        }
+        #top-title .tuesday-night {
+          font-size: 100px;
+          line-height: 120px;
+        }
+        .half-p {
+          font-size: 36px;
+          line-height: 46px;
+          min-width: 400px;
+        }
+      }
+      @media (max-width: 1100px) {
+        #home {
+          height: 50%;
+        }
+        #top-title {
+          position: absolute;
+          bottom: 47%;
+        }
+        #hello {
+          height: 60%;
+        }
+        .half-p {
+          max-width: 75%;
+          padding: 0 50px;
+          height: 80%;
+        }
+        #projects-container h1 {
+          font-size: 80px;
+          line-height: 90px;
+        }
+        #contact-container {
+          flex-direction: column;
+        }
+        .cocktail-card,
+        .contact-card {
+          width: 60%;
+          margin: 0;
+        }
+        .cocktail-card {
+          margin-bottom: 25px;
+        }
+        .contact-card {
+          padding: 2%;
+        }
+      }
+      @media (max-width: 800px) {
+        #top-title {
+          font-size: 80px;
+          line-height: 100px;
+        }
+        #top-title .tuesday-night {
+          font-size: 80px;
+          line-height: 100px;
+        }
+        .half-p {
+          font-size: 28px;
+          line-height: 38px;
+          max-width: 100%;
+        }
+        #projects-container h1 {
+          font-size: 60px;
+          line-height: 70px;
+        }
+        .cocktail-card,
+        .contact-card {
+          width: 90%;
+        }
+      }
+      @media (max-width: 650px) {
+        #home {
+          height: 30%;
+        }
+        #top-title {
+          position: absolute;
+          bottom: 68%;
+        }
+        #top-title {
+          font-size: 60px;
+          line-height: 80px;
+        }
+        #top-title .tuesday-night {
+          font-size: 60px;
+          line-height: 80px;
+        }
+        .half-p {
+          font-size: 20px;
+          line-height: 30px;
+          max-width: 100%;
+          min-width: 100px;
+        }
+        #hello {
+          height: 40%;
+        }
+        #projects-container {
+          height: auto;
+          padding-bottom: 130px;
+        }
+        .main-page-container {
+          flex-direction: column;
+        }
+        .main-page-column {
+          margin: 40px 0;
+        }
+        #projects-container h1,
+        #projects-container img,
+        #projects-container a {
+          margin-bottom: 25px;
+        }
+      }
+      @media (max-width: 500px) {
+        #top-title {
+          font-size: 40px;
+          line-height: 60px;
+        }
+        #top-title .tuesday-night {
+          font-size: 40px;
+          line-height: 60px;
+        }
+        #top-title .tuesday-night span {
+          margin-left: 15px;
+        }
+        .contact-card .contact-info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+
+        .contact-card i {
+          margin-right: 10px;
+          font-size: 24px;
+          color: #444;
+        }
       }
     `}</style>
   </React.Fragment>

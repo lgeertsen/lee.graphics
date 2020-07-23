@@ -28,7 +28,7 @@ const Home = () => {
       <section className="main-content">
         <ProjectCard
           project="Pulsar"
-          description="A modern open source pipeline software for animatoin & VFX"
+          description="A modern open source pipeline software for animation & VFX"
           img="pulsar-graph-editor.png"
           bgImg={false}
           imgFirst={true}
@@ -105,6 +105,18 @@ const Home = () => {
         background-size: cover;
         background-repeat: no-repeat;
         // background-attachment: fixed;
+      }
+
+      @media (max-width: 800px) {
+        .project-header {
+          height: 40%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .project-header {
+          height: 20%;
+        }
       }
     `}</style>
   </React.Fragment>

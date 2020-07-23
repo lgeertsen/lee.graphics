@@ -102,6 +102,7 @@ export default ({ children }) => {
           font-weight: bold;
           line-height: 22px;
           margin: 21px 0;
+          color: #444;
         }
 
         .page-wrapper {
@@ -143,7 +144,7 @@ export default ({ children }) => {
           background: #fff;
           margin-left: -10px;
           padding-bottom: 10px;
-          padding-left: 10px;
+          padding-left: 50px;
           color: #d1d1d1;
           font-size: 46px;
           line-height: 58px;
@@ -155,10 +156,11 @@ export default ({ children }) => {
           text-decoration: underline;
           text-decoration-style: dotted;
           font-weight: 800;
+          transition: all 0.3s;
         }
 
         .frame {
-          z-index: 1;
+          // z-index: 1;
           position: absolute;
           width: calc(100% - 20px);
           height: calc(100% - 20px);
@@ -192,6 +194,10 @@ export default ({ children }) => {
 
         .grey-text {
           color: #a4a4a4;
+        }
+
+        .white-text {
+          color: #fff;
         }
 
         .btn {

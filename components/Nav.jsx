@@ -23,13 +23,13 @@ const Nav = () => {
       <div className="icons-wrapper">
         <a href="https://www.linkedin.com/in/lgeertsen/" target="_blank" className="icon fa-stack">
           {/* <i className="fas fa-circle fa-stack-2x"></i>
-          <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i> */}
-          <i className="lab la-github"></i>
+          <i className="fab fa-github fa-stack-1x fa-inverse"></i> */}
+          <i className="lab la-linkedin"></i>
         </a>
         <a href="https://github.com/lgeertsen" target="_blank" className="icon fa-stack">
           {/* <i className="fas fa-circle fa-stack-2x"></i>
-          <i className="fab fa-github fa-stack-1x fa-inverse"></i> */}
-          <i className="lab la-linkedin"></i>
+          <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i> */}
+          <i className="lab la-github"></i>
         </a>
       </div>
     </div>
