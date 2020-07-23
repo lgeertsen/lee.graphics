@@ -99,7 +99,7 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
             align-items: center;
             flex: 1;
             order: ${imgFirst ? 0 : 1};
-            background-color: #e3e3e3;
+            background-color: #fff;
             // background-image: url("${img}");
             background-position: 50% 50%;
             background-size: cover;

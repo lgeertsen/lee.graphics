@@ -64,11 +64,11 @@ const Home = () => {
         <section id="border-section"></section>
 
         <section className="" id="contact-section">
-          <div className="container">
-            <div className="ingr">
+          <div className="container" id="contact-container">
+            <div className="cocktail-card">
               <div className="post-card-content">
                 <h2>My Favorite Cocktail</h2>
-                <div className="divider"></div>
+                <div className="divider divider-white"></div>
                 <div className="container ingredients">
                   <div className="row">
                     <div className="col-4 measurement text-right">1 oz</div>
@@ -86,7 +86,7 @@ const Home = () => {
               </div>
               <div className="frame"></div>
             </div>
-            <div className="prep">
+            <div className="contact-card">
               <div className="post-card-content">
                 <h2>Contact Information</h2>
                 <div className="divider"></div>
@@ -96,166 +96,13 @@ const Home = () => {
                   <p className="preparation-step">Garnish with an orange peel.</p>
                 </div>
               </div>
-              <div className="frame"></div>
+              <div className="frame frame-grey"></div>
             </div>
           </div>
         </section>
 
       </section>
     </div>
-
-    <style jsx global>{`
-      @font-face {
-        font-family: "Tuesday Night";
-        src: url("/TuesdayNight/TuesdayNight-Regular.otf");
-      }
-
-      html,
-      body,
-      #__next,
-      body-container {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: Average, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        color: #333352;
-        font-size: 16px;
-        line-height: 22px;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      ::selection {
-        background: #dfa25f;
-        color: #fff;
-      }
-
-      ::-webkit-scrollbar-track {
-      	background-color: #F5F5F5;
-      }
-
-      ::-webkit-scrollbar {
-      	width: 10px;
-      	background-color: #F5F5F5;
-      }
-
-      ::-webkit-scrollbar-thumb {
-      	background-color: #dfa25f;
-      }
-
-      .page-wrapper {
-        padding-left: 90px;
-        height: 100%;
-      }
-
-      .full-section {
-        position: relative;
-        height: 100%;
-        background-color: #fff;
-      }
-
-      .full-page {
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-      }
-
-      .w-container {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 940px;
-      }
-
-      .wide-container {
-        position: relative;
-        display: block;
-        max-width: 1224px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .half-p {
-        position: absolute;
-        top: 24%;
-        max-width: 45%;
-        min-width: 500px;
-        background: #fff;
-        margin-left: -10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        color: #d1d1d1;
-        font-size: 46px;
-        line-height: 58px;
-        text-shadow: 1px 1px 0 #fff;
-      }
-
-      .stylish-link {
-        color: #a4a4a4;
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        font-weight: 800;
-      }
-
-      .frame {
-        z-index: 1;
-        position: absolute;
-        width: calc(100% - 20px);
-        height: calc(100% - 20px);
-        left: 10px;
-        top: 10px;
-        border: 1px solid #fff;
-        color: transparent;
-      }
-
-      .frame-grey {
-        border-color: #e3e3e3;
-      }
-
-      .frame.frame-yellow {
-        border-color: #dfa25f;
-      }
-
-      .divider {
-        width: 90px;
-        height: 4px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        border-top: 1px solid #dfa25f;
-        border-bottom: 1px solid #dfa25f;
-      }
-
-      .grey-text {
-        color: #a4a4a4;
-      }
-
-      .btn {
-        position: relative;
-        z-index: 5;
-        padding: 10px 20px;
-        background: transparent;
-        color: #fff;
-        border-radius: 3px;
-        font-family: "Oswald", sans-serif;
-        border: 1px solid #dfa25f;
-        font-size: 24px;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-      .btn:hover {
-        background: #dfa25f;
-      }
-      .tuesday-night {
-        font-family: 'Tuesday Night', 'Fjalla One', sans-serif;
-        text-transform: none;
-        font-weight: 400;
-        color: #dfa25f;
-        font-size: 120px;
-        text-shadow: 1px 1px 2px #444;
-      }
-    `}</style>
 
     <style jsx>{`
       .home-section {
@@ -395,6 +242,38 @@ const Home = () => {
         background-repeat: repeat, no-repeat;
         background-attachment: scroll, fixed;
         color: #fff;
+      }
+
+      #contact-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .cocktail-card,
+      .contact-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
+        color: #111;
+        text-decoration: none;
+        padding: 48px 8%;
+        align-items: center;
+      }
+
+      .cocktail-card {
+        flex: 1;
+        margin-right: 20px;
+        background-color: #dfa25f;
+        color: #fff;
+        padding: 48px 2%;
+      }
+
+      .contact-card {
+        flex: 2;
       }
     `}</style>
   </React.Fragment>
