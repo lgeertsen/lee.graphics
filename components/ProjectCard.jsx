@@ -31,12 +31,12 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
                 <div className="project-card-links">
                   {links.map((link, index) => (
                     <div key={index} className="project-link-container">
-                      <div>
+                      <div className="link-icon">
                         <a key={index} className="project-link" href={link.link} target="__blank">
                             <i className={link.icon}></i>
                         </a>
                       </div>
-                      <div>
+                      <div className="link-link">
                         <a className="project-link" href={link.link} target="__blank">
                           <h6>{link.link}</h6>
                         </a>
@@ -235,6 +235,7 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
 
           @media (max-width: 600px) {
             .project-title {
+              text-align: center;
               font-size: 44px;
               font-weight: 400;
               margin-top: 40px;
@@ -257,6 +258,23 @@ const ProjectCard = ({ project, description, img, bgImg, imgFirst, technologies,
             }
             .project-link h6 {
               font-size: 14px;
+            }
+            .project-card-content {
+              overflow: hidden;
+            }
+            .project-card-links {
+              flex-direction: row;
+            }
+            .project-link i {
+              font-size: 34px;
+            }
+            .link-link {
+              display: none;
+            }
+          }
+          @media (max-width: 500px) {
+            .project-title {
+              font-size: 34px;
             }
           }
         `}</style>
