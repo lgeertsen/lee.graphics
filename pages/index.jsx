@@ -504,14 +504,40 @@ const Home = () => {
         #top-title .tuesday-night span {
           margin-left: 15px;
         }
+        .half-p {
+          font-size: 14px;
+          line-height: 20px;
+          max-width: 100%;
+          min-width: 100px;
+        }
+
+        #projects-container {
+          height: auto;
+          padding-bottom: 200px;
+        }
+        #projects-container h1 {
+          font-size: 48px;
+        }
+        .cocktail-title {
+          font-size: 44px;
+        }
+        .cocktail-card {
+          padding: 5px 12px;
+          font-size: 14px;
+        }
+        .contact-card .columns {
+          width: 95%;
+        }
         .contact-card .contact-info {
           display: flex;
           flex-direction: row;
           align-items: center;
-          font-size: 16px;
+          font-size: 14px;
           margin-bottom: 5px;
         }
-
+        .contact-title {
+          line-height: 40px;
+        }
         .contact-card i {
           margin-right: 10px;
           font-size: 24px;
