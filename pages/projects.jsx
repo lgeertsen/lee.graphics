@@ -109,21 +109,17 @@ const Home = () => {
             }
           ]}
         />
-        {/* <ProjectCard
+        <ProjectCard
           project="Synergie"
           description="A short made with Unreal Engine 4. I worked on the blueprints, fx, and scripts"
-          img="UPGRADS_VIGNETTE.png"
+          img="synergie.png"
           team={[]}
           bgImg={true}
           imgFirst={false}
           technologies={["unreal", "houdini", "maya"]}
           links={[
-            {
-              link: "https://github.com/lgeertsen/Arnold_to_Clarisse",
-              icon: "las la-link"
-            }
           ]}
-        /> */}
+        />
         <ProjectCard
           project="Mayhem"
           description="A 3D turn based shooter game made with Unity for Airconsole"

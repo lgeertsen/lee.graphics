@@ -42,16 +42,16 @@ const Nav = () => {
         <div className="nav-line"></div>
       </a>
     </Link>
+    <Link href="projects">
+      <a className="nav-link">
+      <h1 className="nav-text">PROJECTS</h1>
+      <div className="nav-line"></div>
+      </a>
+    </Link>
     <a href="Resume_GEERTSEN_Lee_Pipeline_TD.pdf" className="nav-link" target="_blank">
       <h1 className="nav-text">RESUME</h1>
       <div className="nav-line"></div>
     </a>
-    <Link href="projects">
-      <a className="nav-link">
-        <h1 className="nav-text">PROJECTS</h1>
-        <div className="nav-line"></div>
-      </a>
-    </Link>
     {/* <a href="contact.html" className="nav-link">
       <h1 className="nav-text">CONTACT</h1>
       <div className="nav-line"></div>
