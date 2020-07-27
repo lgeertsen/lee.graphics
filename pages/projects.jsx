@@ -30,6 +30,7 @@ const Home = () => {
           project="Pulsar"
           description="A modern open source pipeline software for animation & VFX"
           img="pulsar-graph-editor.png"
+          team={[]}
           bgImg={false}
           imgFirst={true}
           technologies={["electron", "nextjs", "nodejs", "socketio", "python", "sass", "houdini", "maya", "nuke"]}
@@ -47,7 +48,8 @@ const Home = () => {
         <ProjectCard
           project="Vyewer"
           description="Tool to review images and sequences with synchronised playback of multiple videos"
-          img="pulsar-graph-editor.png"
+          img="vyewer.png"
+          team={[]}
           bgImg={true}
           imgFirst={false}
           technologies={["electron", "nextjs", "nodejs", "react"]}
@@ -61,7 +63,8 @@ const Home = () => {
         <ProjectCard
           project="Magnet AR"
           description="Tool to animate cameras in 3D software (Maya, Houdini, Blender) with the use of AR on a mobile phone"
-          img="pulsar-graph-editor.png"
+          img="magnetar-wip.png"
+          team={[]}
           bgImg={false}
           imgFirst={true}
           technologies={["react-native", "viro-react", "maya", "houdini", "blender"]}
@@ -73,16 +76,66 @@ const Home = () => {
           ]}
         />
         <ProjectCard
-          project="Arnold to Clarisse"
-          description="Tool to review images and sequences with synchronised playback of multiple videos"
-          img="pulsar-graph-editor.png"
+          project="Upgrads"
+          description="Game made for the Global Game Jam 2020"
+          img="UPGRADS_VIGNETTE.png"
+          team={[]}
           bgImg={true}
           imgFirst={false}
+          technologies={["unity", "Csharp", "airconsole"]}
+          links={[
+            {
+              link: "https://bit.ly/upgrads-lee",
+              icon: "las la-link"
+            },
+            {
+              link: "https://bit.ly/upgrads-no-post-process",
+              icon: "las la-link"
+            }
+          ]}
+        />
+        <ProjectCard
+          project="Arnold to Clarisse"
+          description="A tool which allows you to export anArnold shader network in Maya and import it in Clarisse."
+          img="arnold-to-clarisse.png"
+          team={[]}
+          bgImg={false}
+          imgFirst={true}
           technologies={["python", "maya", "clarisse"]}
           links={[
             {
               link: "https://github.com/lgeertsen/Arnold_to_Clarisse",
               icon: "lab la-github"
+            }
+          ]}
+        />
+        {/* <ProjectCard
+          project="Synergie"
+          description="A short made with Unreal Engine 4. I worked on the blueprints, fx, and scripts"
+          img="UPGRADS_VIGNETTE.png"
+          team={[]}
+          bgImg={true}
+          imgFirst={false}
+          technologies={["unreal", "houdini", "maya"]}
+          links={[
+            {
+              link: "https://github.com/lgeertsen/Arnold_to_Clarisse",
+              icon: "las la-link"
+            }
+          ]}
+        /> */}
+        <ProjectCard
+          project="Mayhem"
+          description="A 3D turn based shooter game made with Unity for Airconsole"
+          img="mayhem.png"
+          team={[]}
+          bgImg={false}
+          imgFirst={true}
+          technologies={["unity", "Csharp", "airconsole"]}
+          links={[
+            {
+              link: "http://bit.ly/termayhemv6",
+              icon: "las la-link"
             }
           ]}
         />
