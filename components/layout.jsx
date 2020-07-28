@@ -17,14 +17,14 @@ export default ({ children }) => {
           name="description"
           content="ArtFX Student Manager"
         />
-        <meta property="og:title" content="Next.js + MongoDB App" />
+        <meta property="og:title" content="Lee Geertsen | Pipeline TD" />
         <meta
           property="og:description"
-          content="nextjs-mongodb-app is a continously developed app built with Next.JS and MongoDB. This project goes further and attempts to integrate top features as seen in real-life apps."
+          content="Portfolio of Lee Geertsen | Pipeline TD"
         />
         <meta
           property="og:image"
-          content="https://repository-images.githubusercontent.com/201392697/5d392300-eef3-11e9-8e20-53310193fbfd"
+          content="Resume_img.png"
         />
       </Head>
 
