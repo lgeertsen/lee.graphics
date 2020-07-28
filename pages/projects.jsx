@@ -46,12 +46,27 @@ const Home = () => {
           ]}
         />
         <ProjectCard
+          project="Artfx 2020"
+          description="I worked as Pipeline TD on the 2020 graduation movies of ArtFx (Release 2021)."
+          img="artfx-graduation-movies-2020.png"
+          team={[]}
+          bgImg={true}
+          imgFirst={false}
+          technologies={[]}
+          links={[
+            {
+              link: "https://vimeo.com/artfx",
+              icon: "las la-link"
+            }
+          ]}
+        />
+        <ProjectCard
           project="Vyewer"
           description="Tool to review images and sequences with synchronised playback of multiple videos"
           img="vyewer.png"
           team={[]}
-          bgImg={true}
-          imgFirst={false}
+          bgImg={false}
+          imgFirst={true}
           technologies={["electron", "nextjs", "nodejs", "react"]}
           links={[
             {
@@ -65,8 +80,8 @@ const Home = () => {
           description="Tool to animate cameras in 3D software (Maya, Houdini, Blender) with the use of AR on a mobile phone"
           img="magnetar-wip.png"
           team={[]}
-          bgImg={false}
-          imgFirst={true}
+          bgImg={true}
+          imgFirst={false}
           technologies={["react-native", "viro-react", "maya", "houdini", "blender"]}
           links={[
             {
@@ -80,8 +95,8 @@ const Home = () => {
           description="Game made for the Global Game Jam 2020"
           img="UPGRADS_VIGNETTE.png"
           team={[]}
-          bgImg={true}
-          imgFirst={false}
+          bgImg={false}
+          imgFirst={true}
           technologies={["unity", "Csharp", "airconsole"]}
           links={[
             {
@@ -90,6 +105,21 @@ const Home = () => {
             },
             {
               link: "https://bit.ly/upgrads-no-post-process",
+              icon: "las la-link"
+            }
+          ]}
+        />
+        <ProjectCard
+          project="Artfx 2019"
+          description="I worked as Pipeline TD on the 2019 graduation movies of ArtFx."
+          img="artfx-graduation-movies-2019.png"
+          team={[]}
+          bgImg={true}
+          imgFirst={false}
+          technologies={[]}
+          links={[
+            {
+              link: "https://vimeo.com/artfx",
               icon: "las la-link"
             }
           ]}
