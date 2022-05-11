@@ -27,15 +27,50 @@ const Home = () => {
     <div className="page-wrapper">
       <section className="full-section home-section" id="home"></section>
 
-      <h1 id="top-title"><span className="tuesday-night">Lee <span className="offset">Geertsen</span></span><br/>Pipeline TD</h1>
+      <h1 id="top-title"><span className="tuesday-night">Lee <span className="offset">Geertsen</span></span><br/>Pipeline<br/>Developer</h1>
 
       <section className="full-page" id="hello">
         <div className="full-page w-container wide-container">
-          <div className="half-p">I'm a graduating VFX &amp; Game Programming student at <a href="https://artfx.school/en/technical-director-visual-effetcs-video-games-programming/" target="_blank" className="stylish-link">ArtFx</a> with a <em>passion for coding &amp; cocktails</em></div>
+          <div className="half-p">I'm a pipeline developer currently working <a className="stylish-link">@Cinesite</a> with a <em>passion for coding &amp; cocktails</em></div>
         </div>
       </section>
 
       <section className="main-content">
+
+        <section id="shows-container">
+          <div className="columns">
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="animal_farm.jpeg"/>
+              </figure>
+            </div>
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="the_witcher.jpeg"/>
+              </figure>
+            </div>
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="wheel_of_time.jpeg"/>
+              </figure>
+            </div>
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="moon_knight.jpeg"/>
+              </figure>
+            </div>
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="cyrano.jpeg"/>
+              </figure>
+            </div>
+            <div className="column">
+              <figure className="image is-2by3">
+                <img src="space_jam.jpeg"/>
+              </figure>
+            </div>
+          </div>
+        </section>
 
         <section className="full-section" id="projects-container">
           <div className="frame"></div>
@@ -58,6 +93,17 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="border-section"></section>
+
+        <section className="full-section" id="demoreel-container">
+          <div className="frame"></div>
+          <h1>Demo Reel</h1>
+
+          <div className="demo-reel-container">
+            <iframe src="https://player.vimeo.com/video/451877177?h=e63b3421ae" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
 
@@ -100,13 +146,13 @@ const Home = () => {
                 <div className="columns is-8-widescreen is-desktop is-centered-mobile">
                   <div className="column is-8-widescreen">
                     <div className="contact-info grey-text"><i className="las la-user-alt"></i>Lee Geertsen</div>
-                    <div className="contact-info grey-text"><i className="las la-map-marker"></i>Montpellier, France</div>
+                    <div className="contact-info grey-text"><i className="las la-map-marker"></i>Agen, France</div>
                     <div className="contact-info grey-text"><i className="las la-phone"></i>+33 (0) 7 71 76 38 62</div>
                   </div>
                   <div className="column is-8-widescreen">
                     <div className="contact-info grey-text">
-                      <a className="stylish-link" href="mailto:lgeertsen@artfx.fr">
-                        <i className="las la-envelope"></i>lgeertsen@artfx.fr
+                      <a className="stylish-link" href="mailto:lee.geertsen@hotmail.com">
+                        <i className="las la-envelope"></i>lee.geertsen@hotmail.com
                       </a>
                     </div>
                     <div className="contact-info grey-text">
@@ -181,7 +227,16 @@ const Home = () => {
         height: 100%;
       }
 
-      #projects-container {
+      #shows-container {
+        padding: 50px;
+        background-color: #eee;
+        background-image: url("bg_pattern.jpg");
+        background-repeat: repeat;
+        background-size: 16px;
+      }
+
+      #projects-container,
+      #demoreel-container {
         display: flex;
         flex-direction: column;
         /* border: 10px solid #fff; */
@@ -195,7 +250,33 @@ const Home = () => {
         padding-bottom: 50px;
       }
 
-      #projects-container h1 {
+      #demoreel-container {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("https://images.unsplash.com/photo-1488229297570-58520851e868");
+        // background-image: linear-gradient(180deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url("https://images.unsplash.com/photo-1488229297570-58520851e868");
+      }
+
+      #demoreel-container {
+        padding-top: 50px;
+      }
+
+      .demo-reel-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .demo-reel-container iframe {
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        z-index: 50;
+        // background: #000;
+      }
+
+      #projects-container h1,
+      #demoreel-container h1 {
         margin: 0;
         padding-top: 0px;
         margin-bottom: 50px;

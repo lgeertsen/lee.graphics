@@ -31,6 +31,11 @@ const Nav = () => {
           <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i> */}
           <i className="lab la-github"></i>
         </a>
+        <a href="https://www.imdb.com/name/nm13132509/" target="_blank" className="icon fa-stack">
+          {/* <i className="fas fa-circle fa-stack-2x"></i>
+          <i className="fab fa-linkedin fa-stack-1x fa-inverse"></i> */}
+          <i className="lab la-imdb"></i>
+        </a>
       </div>
     </div>
   </div>
